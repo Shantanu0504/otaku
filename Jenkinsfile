@@ -10,11 +10,11 @@ pipeline {
 		      }}
 		stage('Build') {
 	           steps {
-			  sh '/home/shantanu/Downloads/apache-maven-3.9.5-bin/apache-maven-3.9.5/bin/mvn install'
+			  sh '/home/shantanu/apache-maven-3.9.6-bin/apache-maven-3.9.6/mvn install'
 	                 }}
 		stage('Deployment'){
 		   steps {
-		sh 'cp target/oneplus.war /home/shantanu/Downloads/apache-tomcat-9.0.82/webapps'
+		sh 'cp target/otaku.war /home/shantanu/apache-tomcat-9.0.82/webapps'
 
 			}}	
 }}
